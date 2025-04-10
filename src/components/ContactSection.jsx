@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const content = {
     en: {
       heading: 'Contact Us',
-      address: 'xxxxxxxxx, USA',
+      address: '123 Industrial Road, Innovation City, USA',
       phone: 'Phone',
       email: 'Email',
       formTitle: 'Send us a message',
@@ -20,7 +20,7 @@ const content = {
     },
     cn: {
       heading: '联系我们',
-      address: '公司地址',
+      address: '美国·创新市·工业大道123号',
       phone: '电话',
       email: '邮箱',
       formTitle: '在线留言',
@@ -86,5 +86,4 @@ const Contact = () => {
   };
   
   export default Contact;
-  
   

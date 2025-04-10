@@ -7,7 +7,7 @@ const content = {
       heading: 'About Us',
       introHeading: 'Company Introduction',
       introText:
-        'Industrial Research Institute is dedicated to driving industrial transformation by providing cutting-edge automation technologies and integrated solutions to global manufacturers.',
+        'International Innovation Institute LLC is dedicated to driving industrial transformation by providing cutting-edge automation technologies and integrated solutions to global manufacturers.',
       missionHeading: 'Mission, Vision & Values',
       missionList: [
         { label: 'Mission:', value: 'Empowering industry, connecting the future.' },
