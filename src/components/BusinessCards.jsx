@@ -6,16 +6,16 @@ const content = {
         heading: 'Our Core Businesses',
         businesses: [
             {
-                title: 'Smart Automation Systems',
-                description: 'Delivering intelligent automation control to optimize manufacturing processes.',
+                title: 'Advanced Industrial Technologies',
+                description: 'From lab to production — we deliver automation, materials, and energy solutions ready for industrial scale.',
             },
             {
-                title: 'Industrial Tools',
-                description: 'Providing precision tools and instruments for industrial production.',
+                title: 'Innovation Facilitation',
+                description: 'Bridging research and markets — we accelerate technology transfer and commercialization.',
             },
             {
-                title: 'Raw Materials',
-                description: 'Supplying high-quality raw materials to support global industries.',
+                title: 'Technical Consulting & Advisory',
+                description: 'Enhancing production through data and cross-disciplinary engineering — for better technology, cost efficiency, and sustainability.',
             },
         ],
     },
@@ -23,16 +23,16 @@ const content = {
         heading: '核心业务',
         businesses: [
           {
-            title: '智能自动化系统',
-            description: '提供智能自动化控制系统，优化制造流程。',
+            title: '先进的工业技术',
+            description: '从实验室到产线，交付自动化、材料与能源的工业级解决方案。',
           },
           {
-            title: '工业工具',
-            description: '提供精密工业生产工具与仪器。',
+            title: '创新促进',
+            description: '连接科研与市场，助力技术加速转化与商业落地。',
           },
           {
-            title: '工业原材料',
-            description: '为全球工业提供高质量原材料。',
+            title: '技术咨询与顾问',
+            description: '用数据和跨领域工程经验，提升现有产线和组织的技术含量、成本效率和可持续表现。',
           },
         ],
       },

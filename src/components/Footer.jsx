@@ -9,14 +9,14 @@ const Footer = () => {
           marginTop: '4rem',
         }}
       >
-        <p><strong>Industrial Research Institute</strong></p>
+        <p><strong>International Innovation Institute LLC</strong></p>
         <p>123 Innovation Blvd, Tech City, Global</p>
         <p>Email: contact@iri-global.org | Tel: +1 800 123 4567</p>
   
         <div style={{ marginTop: '1rem' }}>
-          <a href="#" style={{ color: '#ccc', margin: '0 1rem' }}>Facebook</a>
-          <a href="#" style={{ color: '#ccc', margin: '0 1rem' }}>LinkedIn</a>
-          <a href="#" style={{ color: '#ccc', margin: '0 1rem' }}>WeChat</a>
+          <a href="#" style={{ color: 'white', margin: '0 1rem' }}>Facebook</a>
+          <a href="#" style={{ color: 'white', margin: '0 1rem' }}>LinkedIn</a>
+          <a href="#" style={{ color: 'white', margin: '0 1rem' }}>WeChat</a>
         </div>
   
         <div style={{ marginTop: '1rem', fontSize: '0.9rem' }}>
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
   
         <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#888' }}>
-          &copy; 2025 Industrial Research Institute. All rights reserved.
+          &copy; 2025 International Innovation Institute LLC. All rights reserved.
         </p>
       </footer>
     );

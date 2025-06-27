@@ -5,7 +5,7 @@ import { LanguageContext } from '../LanguageContext';
 const content = {
     en: {
       home: 'Home',
-      about: 'About Us',
+      career:'Career',
       business: 'Business',
       products: 'Products',
       contact: 'Contact Us',
@@ -13,7 +13,7 @@ const content = {
     },
     cn: {
       home: '首页',
-      about: '关于我们',
+      career: '招聘信息',
       business: '核心业务',
       products: '产品中心',
       contact: '联系我们',
@@ -31,8 +31,8 @@ const Header = () => {
 
     return (
       <header style={{
-        backgroundColor: '#1f2d3d', 
-        color: 'white', 
+        backgroundColor: '#d9d9d9', 
+        color: '#1a1a1a', 
         padding: '1rem 2rem',
         position: 'sticky', 
         top: 0, 
@@ -41,9 +41,16 @@ const Header = () => {
         justifyContent: 'space-between', 
         alignItems: 'center'
       }}>
-        {/* Logo */}
-      <div style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
-      International Innovation Institute LLC
+      {/* Logo + Company Name */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <img
+            src="/logo.png"
+            alt="Company Logo"
+            style={{ width: '73px', height: '73px' }}
+        />
+        <span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
+          International Innovation Institute LLC
+        </span>
       </div>
 
       {/* Navigation Menu */}
@@ -56,11 +63,12 @@ const Header = () => {
             margin: 0, 
             alignItems: 'center',
             }}>
-            <li><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>{text.home}</Link></li>
-            <li><Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>{text.about}</Link></li>
-            <li><Link to="/business" style={{ color: 'white', textDecoration: 'none' }}>{text.business}</Link></li>
-            <li><Link to="/products" style={{ color: 'white', textDecoration: 'none' }}>{text.products}</Link></li>
-            <li><Link to="/contact" style={{ color: 'white', textDecoration: 'none' }}>{text.contact}</Link></li>
+            <li><Link to="/" style={{ color: '#1f2d3d', textDecoration: 'none' }}>{text.home}</Link></li>
+            <li><a href="#about" style={{ color: '#1f2d3d', textDecoration: 'none' }}>{text.about}</a></li>
+            <li><Link to="/business" style={{ color: '#1f2d3d', textDecoration: 'none' }}>{text.business}</Link></li>
+            <li><Link to="/products" style={{ color: '#1f2d3d', textDecoration: 'none' }}>{text.products}</Link></li>
+            <li><Link to="/contact" style={{ color: '#1f2d3d', textDecoration: 'none' }}>{text.contact}</Link></li>
+            <li><Link to="/career" style={{ color: '#1f2d3d', textDecoration: 'none' }}>{text.career}</Link></li>
           </ul>
         </nav>
         {/* Language Selector and Search */}

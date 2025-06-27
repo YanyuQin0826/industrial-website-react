@@ -15,7 +15,7 @@ const content = {
       company: 'Company Name',
       inquiry: 'Type of Inquiry',
       submit: 'Submit',
-      cooperation: 'Interested in collaborating? Reach out to us anytime.',
+      cooperation: 'Let’s co-create the future of industrial innovation.',
       backToHome: 'Back to Home',
     },
     cn: {
@@ -30,7 +30,7 @@ const content = {
       company: '公司名称',
       inquiry: '咨询类型',
       submit: '提交',
-      cooperation: '想要合作？欢迎随时与我们联系。',
+      cooperation: '我们欢迎来自制造业、科研机构、投资机构的合作机会。',
       backToHome: '返回首页',
     },
   };
