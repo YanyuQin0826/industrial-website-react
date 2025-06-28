@@ -7,6 +7,11 @@ import Contact from './pages/Contact';
 import Career from './pages/Career';
 import NotFound from './pages/NotFound';
 
+import BusinessTech from './pages/BusinessTech';
+import BusinessInnovation from './pages/BusinessInnovation';
+import BusinessConsulting from './pages/BusinessConsulting';
+import BusinessApplications from './pages/BusinessApplications';
+
 import Product1 from './pages/Product1';
 import Product2 from './pages/Product2';
 import Product3 from './pages/Product3';
@@ -23,6 +28,10 @@ function App() {
         <Route path="products/product3" element={<Product3 />} />
         <Route path="products/product4" element={<Product4 />} />
         <Route path="business" element={<Business />} />
+        <Route path="business/tech" element={<BusinessTech />} />
+        <Route path="business/innovation" element={<BusinessInnovation />} />
+        <Route path="business/consulting" element={<BusinessConsulting />} />
+        <Route path="business/applications" element={<BusinessApplications />} /> 
         <Route path="contact" element={<Contact />} />
         <Route path="career" element={<Career />} />
         <Route path="*" element={<NotFound />} />

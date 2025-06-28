@@ -29,7 +29,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',  // ✅ 新增电话字段
+    phone: '',  
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
