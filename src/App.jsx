@@ -28,7 +28,7 @@ function App() {
         <Route path="products/product3" element={<Product3 />} />
         <Route path="products/product4" element={<Product4 />} />
         <Route path="business" element={<Business />} />
-        <Route path="business/tech" element={<BusinessTech />} />
+        <Route path="business/advanced-tech" element={<BusinessTech />} />
         <Route path="business/innovation" element={<BusinessInnovation />} />
         <Route path="business/consulting" element={<BusinessConsulting />} />
         <Route path="business/applications" element={<BusinessApplications />} /> 

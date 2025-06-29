@@ -21,10 +21,10 @@ const content = {
     home: '网站首页',
     business: '核心业务',
     businessMenu: [
-      { name: '先进工业技术', path: '/business/advanced-tech' },
+      { name: '工业技术', path: '/business/advanced-tech' },
       { name: '创新促进', path: '/business/innovation' },
-      { name: '技术咨询与优化', path: '/business/consulting' },
-      { name: '服务行业与落地成效', path: '/business/applications' }
+      { name: '技术咨询', path: '/business/consulting' },
+      { name: '行业应用', path: '/business/applications' }
     ],
     products: '产品中心',
     contact: '联系我们',
@@ -116,19 +116,18 @@ const Header = () => {
               {text.business} ⌄
             </span>
             {showDropdown && (
-              <ul style={dropdownStyle}>
+              <div style={simpleDropdownStyle}>
                 {text.businessMenu.map((item, index) => (
-                  <li key={index}>
-                    <span
-                      onClick={() => handleMenuClick(item.path)}
-                      style={dropdownLinkStyle}
-                    >
-                      {item.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
+              <div
+                key={index}
+                onClick={() => handleMenuClick(item.path)}
+                style={simpleDropdownItemStyle}
+              >
+                {item.name}
+              </div>
+            ))}
+           </div>
+          )}
           </li>
           <li><Link to="/contact" style={linkStyle}>{text.contact}</Link></li>
           <li><Link to="/career" style={linkStyle}>{text.career}</Link></li>
@@ -163,25 +162,29 @@ const linkStyle = {
   textDecoration: 'none',
 };
 
-const dropdownStyle = {
+const simpleDropdownStyle = {
   position: 'absolute',
   top: '100%',
   left: 0,
-  backgroundColor: '#fff',
-  boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
-  padding: '0.5rem 1rem',
-  borderRadius: '6px',
+  backgroundColor: '#ffffff',
+  border: '1px solid #ccc',
+  width: '150px', 
   display: 'flex',
   flexDirection: 'column',
+  fontSize: '0.85rem', 
   zIndex: 999,
-  minWidth: '220px',
 };
 
-const dropdownLinkStyle = {
-  color: '#1f2d3d',
-  textDecoration: 'none',
-  padding: '0.4rem 0',
+const simpleDropdownItemStyle = {
+  padding: '6px 10px', 
+  borderBottom: '1px solid #e0e0e0',
   cursor: 'pointer',
+  color: '#1f2d3d',
+  transition: 'background-color 0.2s',
+};
+
+const simpleDropdownItemHoverStyle = {
+  backgroundColor: '#f5f5f5',
 };
 
 export default Header;
