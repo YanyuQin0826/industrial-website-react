@@ -21,7 +21,6 @@ const Hero = () => {
   const slides = content[lang];
   const navigate = useNavigate();
 
-  // 自动轮播
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -34,21 +33,21 @@ const Hero = () => {
       style={{
         position: 'relative',
         width: '100%',
+        height: '100vh', // 与其他板块统一高度
         overflow: 'hidden',
         marginBottom: '3rem',
       }}
     >
       {/* 图片容器 */}
-      <div style={{ position: 'relative', width: '100%' }}>
+      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
         <img
           src={slides[current].image}
           alt={`Slide ${current + 1}`}
           style={{
-            width: '100%',
-            height: 'auto',
-            display: 'block',
-            maxHeight: '600px',
+            width: '100vw',
+            height: '100vh',
             objectFit: 'cover',
+            display: 'block',
           }}
         />
 
@@ -111,5 +110,4 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
