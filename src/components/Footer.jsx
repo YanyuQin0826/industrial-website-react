@@ -10,8 +10,8 @@ const Footer = () => {
         }}
       >
         <p><strong>International Innovation Institute LLC</strong></p>
-        <p>123 Innovation Blvd, Tech City, Global</p>
-        <p>Email: contact@iri-global.org | Tel: +1 800 123 4567</p>
+        <p>9034 Hermosa Dr, Temple City, CA 91780</p>
+        <p>Email: liang@sdaovc.cn | WhatsApp: +86 15305325679</p>
   
         <div style={{ marginTop: '1rem' }}>
           <a href="#" style={{ color: 'white', margin: '0 1rem' }}>Facebook</a>

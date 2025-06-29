@@ -29,13 +29,13 @@ const content = {
         title: '前端开发实习生',
         description: '使用 React 构建响应式网页。要求掌握基础 JavaScript 和 Git。',
         location: '远程 / 美国',
-        email: 'careers@yourcompany.com'
+        email: 'careers@company.com'
       },
       {
         title: '市场助理',
         description: '协助内容撰写、社交媒体与外联活动。有创意与沟通能力者优先。',
         location: '现场办公（纽约）',
-        email: 'careers@yourcompany.com'
+        email: 'careers@company.com'
       }
     ],
     applyText: '请将您的简历发送至：',
