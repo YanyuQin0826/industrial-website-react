@@ -24,7 +24,7 @@ const content = {
       { name: '工业技术', path: '/business/advanced-tech' },
       { name: '创新促进', path: '/business/innovation' },
       { name: '技术咨询', path: '/business/consulting' },
-      { name: '行业应用', path: '/business/applications' }
+      { name: '行业', path: '/business/applications' }
     ],
     products: '产品中心',
     contact: '联系我们',
@@ -70,7 +70,6 @@ const Header = () => {
     setShowDropdown(false);
   };
 
-  // 点击外部区域关闭下拉菜单
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -83,7 +82,6 @@ const Header = () => {
     };
   }, []);
 
-  // 处理搜索功能
   const handleSearch = () => {
     const keyword = searchTerm.trim().toLowerCase();
     const match = Object.entries(searchMap[lang]).find(([key]) =>
@@ -99,11 +97,13 @@ const Header = () => {
   };
 
   return (
-    <header style={{ backgroundColor: '#d9d9d9', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <header style={headerStyle}>
       {/* Logo + Company Name */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
         <img src="/logo.png" alt="Company Logo" style={{ width: '73px', height: '73px' }} />
-        <span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>International Innovation Institute LLC</span>
+        <span style={{ fontWeight: 'bold', fontSize: '1.2rem', color: '#fff' }}>
+          International Innovation Institute LLC
+        </span>
       </div>
 
       {/* Navigation Menu */}
@@ -118,16 +118,18 @@ const Header = () => {
             {showDropdown && (
               <div style={simpleDropdownStyle}>
                 {text.businessMenu.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => handleMenuClick(item.path)}
-                style={simpleDropdownItemStyle}
-              >
-                {item.name}
+                  <div
+                    key={index}
+                    onClick={() => handleMenuClick(item.path)}
+                    style={simpleDropdownItemStyle}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#555'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                  >
+                    {item.name}
+                  </div>
+                ))}
               </div>
-            ))}
-           </div>
-          )}
+            )}
           </li>
           <li><Link to="/contact" style={linkStyle}>{text.contact}</Link></li>
           <li><Link to="/career" style={linkStyle}>{text.career}</Link></li>
@@ -139,7 +141,7 @@ const Header = () => {
         <select
           value={lang}
           onChange={(e) => setLang(e.target.value)}
-          style={{ padding: '0.25rem' }}
+          style={{ padding: '0.3rem', background: '#555', color: '#fff', border: 'none' }}
         >
           <option value="en">EN</option>
           <option value="cn">中文</option>
@@ -150,41 +152,50 @@ const Header = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
           placeholder={lang === 'en' ? 'Search' : '搜索'}
-          style={{ padding: '0.3rem', borderRadius: '4px', border: 'none' }}
+          style={{ padding: '0.3rem', borderRadius: '4px', backgroundColor: '#555', color: '#fff', border: 'none' }}
         />
       </div>
     </header>
   );
 };
 
+const headerStyle = {
+  backgroundColor: '#333333',
+  padding: '1rem 2rem',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  color: '#fff',
+  position: 'sticky',
+  top: 0,
+  zIndex: 1000,
+};
+
 const linkStyle = {
-  color: '#1f2d3d',
+  color: '#ffffff',
   textDecoration: 'none',
+  fontSize: '1rem',
 };
 
 const simpleDropdownStyle = {
   position: 'absolute',
   top: '100%',
   left: 0,
-  backgroundColor: '#ffffff',
-  border: '1px solid #ccc',
-  width: '150px', 
+  backgroundColor: '#444444',
+  border: '1px solid #666',
+  width: '160px',
   display: 'flex',
   flexDirection: 'column',
-  fontSize: '0.85rem', 
+  fontSize: '0.9rem',
   zIndex: 999,
 };
 
 const simpleDropdownItemStyle = {
-  padding: '6px 10px', 
-  borderBottom: '1px solid #e0e0e0',
+  padding: '8px 12px',
+  borderBottom: '1px solid #555',
   cursor: 'pointer',
-  color: '#1f2d3d',
+  color: '#ffffff',
   transition: 'background-color 0.2s',
-};
-
-const simpleDropdownItemHoverStyle = {
-  backgroundColor: '#f5f5f5',
 };
 
 export default Header;
