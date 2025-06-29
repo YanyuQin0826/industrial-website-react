@@ -10,13 +10,13 @@ const content = {
         title: 'Frontend Developer Intern',
         description: 'Work with React to build responsive user interfaces. Basic experience with JavaScript and Git required.',
         location: 'Remote / US',
-        email: 'careers@yourcompany.com'
+        email: 'liang@sdaovc.cn'
       },
       {
         title: 'Marketing Assistant',
         description: 'Assist in content creation, social media, and outreach campaigns. Creativity and communication skills preferred.',
         location: 'On-site (New York)',
-        email: 'careers@yourcompany.com'
+        email: 'liang@sdaovc.cn'
       }
     ],
     applyText: 'To apply, send your resume to:',
@@ -29,13 +29,13 @@ const content = {
         title: '前端开发实习生',
         description: '使用 React 构建响应式网页。要求掌握基础 JavaScript 和 Git。',
         location: '远程 / 美国',
-        email: 'careers@company.com'
+        email: 'liang@sdaovc.cn'
       },
       {
         title: '市场助理',
         description: '协助内容撰写、社交媒体与外联活动。有创意与沟通能力者优先。',
         location: '现场办公（纽约）',
-        email: 'careers@company.com'
+        email: 'liang@sdaovc.cn'
       }
     ],
     applyText: '请将您的简历发送至：',
@@ -120,7 +120,7 @@ const Career = () => {
         ))}
 
         <p style={{ ...paragraphStyle, marginTop: '2rem' }}>
-          {text.applyText} <a href="mailto:careers@yourcompany.com">careers@yourcompany.com</a>
+          {text.applyText} <a href="mailto:liang@sdaovc.cn">liang@sdaovc.cn</a>
         </p>
       </div>
     </section>
