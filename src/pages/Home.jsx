@@ -1,7 +1,7 @@
-import Hero from '../components/Hero';
-import AboutSection from '../components/AboutSection';
 import { useContext } from 'react';
 import { LanguageContext } from '../LanguageContext';
+import Hero from '../components/Hero';
+import AboutSection from '../components/AboutSection';
 import { useNavigate } from 'react-router-dom';
 
 const businessCards = {
@@ -54,44 +54,85 @@ const Home = () => {
 
   return (
     <div>
-      {/* 顶部轮播 */}
-      <Hero />
-
-      {/* About Us 区块 */}
-      <section id="about" style={{ padding: '4rem 1rem', backgroundColor: '#f7f9fb' }}>
-        <AboutSection />
+      {/* 顶部轮播图：占满整个视口高度 */}
+      <section style={{ height: '100vh', overflow: 'hidden' }}>
+        <img
+          src="/images/banner1.png"
+          alt="Banner"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       </section>
 
-      {/* Core Business 三个板块卡片展示 */}
-      <section style={{ padding: '4rem 1rem', backgroundColor: '#ffffff' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          {lang === 'en' ? 'Core Business Areas' : '核心业务板块'}
-        </h2>
+      {/* About Us + 图片并列展示 */}
+      <section style={{ backgroundColor: '#f7f9fb', padding: '4rem 1rem' }}>
         <div style={{
           display: 'flex',
+          flexDirection: 'row',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          alignItems: 'center',
+          gap: '3rem',
           flexWrap: 'wrap',
-          justifyContent: 'center',
-          gap: '2rem',
         }}>
-          {cards.map((card, index) => (
-            <div key={index} style={{
-              width: '320px',
-              borderRadius: '10px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-              overflow: 'hidden',
-              cursor: 'pointer',
-              transition: 'transform 0.3s',
-            }} onClick={() => navigate(card.path)}
-              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
-              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >
-              <img src={card.image} alt={card.title} style={{ width: '100%', height: 'auto' }} />
-              <div style={{ padding: '1rem' }}>
-                <h3 style={{ marginBottom: '0.5rem' }}>{card.title}</h3>
-                <p style={{ color: '#555' }}>{card.description}</p>
+          {/* 左侧文字内容 */}
+          <div style={{ flex: '1 1 500px' }}>
+            <AboutSection />
+          </div>
+
+          {/* 右侧展示图片 */}
+          <div style={{ flex: '1 1 400px', textAlign: 'center' }}>
+            <img
+              src="/images/about-image.png" // ← 你可以替换为真实 About 图片
+              alt="About Us"
+              style={{
+                maxWidth: '100%',
+                borderRadius: '10px',
+                boxShadow: '0 0 12px rgba(0,0,0,0.1)',
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Core Business 区块 */}
+      <section style={{ backgroundColor: '#ffffff', padding: '4rem 1rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            {lang === 'en' ? 'Core Business Areas' : '核心业务板块'}
+          </h2>
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '2rem',
+          }}>
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                style={{
+                  width: '320px',
+                  borderRadius: '10px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                  overflow: 'hidden',
+                  cursor: 'pointer',
+                  transition: 'transform 0.3s',
+                }}
+                onClick={() => navigate(card.path)}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                <img src={card.image} alt={card.title} style={{ width: '100%', height: 'auto' }} />
+                <div style={{ padding: '1rem' }}>
+                  <h3 style={{ marginBottom: '0.5rem' }}>{card.title}</h3>
+                  <p style={{ color: '#555' }}>{card.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>
