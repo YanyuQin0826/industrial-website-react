@@ -55,7 +55,7 @@ const Hero = () => {
         <div
           style={{
             position: 'absolute',
-            bottom: '60px',
+            bottom: '80px',
             left: '50%',
             transform: 'translateX(-50%)',
             display: 'flex',
