@@ -58,12 +58,49 @@ const Home = () => {
       <Hero />
 
       {/* About Us 区块 */}
-      <section id="about" style={{ padding: '4rem 1rem', backgroundColor: '#f7f9fb' }}>
-        <AboutSection />
-      </section>
+<section
+  id="about"
+  style={{
+    backgroundColor: '#f7f9fb',
+    padding: '4rem 1rem',
+    minHeight: '600px', // 保持与轮播一致
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}
+>
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'row',
+      maxWidth: '1200px',
+      width: '100%',
+      gap: '2rem',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+    }}
+  >
+    <div style={{ flex: '1 1 50%' }}>
+      <AboutSection />
+    </div>
+    <div style={{ flex: '1 1 40%', textAlign: 'center' }}>
+      <img
+        src="/images/team.jpg"
+        alt="Our Team"
+        style={{
+          maxWidth: '100%',
+          height: 'auto',
+          borderRadius: '10px',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+        }}
+      />
+    </div>
+  </div>
+</section>
 
       {/* Core Business 三个板块卡片展示 */}
-      <section style={{ padding: '4rem 1rem', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '4rem 1rem', backgroundColor: '#ffffff', minHeight: '600px',}}>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>
           {lang === 'en' ? 'Core Business Areas' : '核心业务板块'}
         </h2>
