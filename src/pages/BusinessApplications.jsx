@@ -1,99 +1,127 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { LanguageContext } from '../LanguageContext';
 
 const BusinessApplications = () => {
   const { lang } = useContext(LanguageContext);
+  const navigate = useNavigate();
 
-  const services = lang === 'cn'
-    ? ['电子与半导体', '智能制造', '能源与公共事业', '医疗与生物医药', '食品与消费品', '化工与新材料']
-    : ['Electronics & Semiconductors', 'Advanced Manufacturing', 'Energy & Utilities', 'Pharmaceuticals & Healthcare', 'Food & Consumer Goods', 'Chemicals & Materials'];
-
-  const impacts = lang === 'cn'
-    ? ['生产效率提升 +52%', '故障停机率降低 –48%', '能效使用效率提升 +29%', '运维成本下降 –21%']
-    : ['+52% Productivity', '–48% Downtime', '+29% Energy Efficiency', '–21% Operating Costs (OPEX)'];
-
-  const scenarios = lang === 'cn'
-    ? [
-        '食品行业：包装产线效率优化、油类精炼处理系统升级',
-        '电子行业：芯片组装自动化检测系统',
-        '医药行业：无菌生产流程的数字化监控',
-        '能源行业：绿色能源系统的实时监测与维护',
-      ]
-    : [
-        'Food Industry: Packaging line optimization, edible oil refining system upgrades',
-        'Electronics: Automated inspection for chip assembly',
-        'Pharmaceuticals: Digital monitoring of aseptic production processes',
-        'Energy: Real-time monitoring and maintenance of green energy systems',
-      ];
-
-  const sectionStyle = {
-    maxWidth: '900px',
-    margin: '0 auto',
-    padding: '2rem',
-    fontFamily: 'Arial, sans-serif',
-    color: '#333',
-    lineHeight: '1.6',
-  };
-
-  const titleStyle = {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: '2rem',
-    color: '#1a237e',
-  };
-
-  const subtitleStyle = {
-    fontSize: '1.25rem',
-    fontWeight: '600',
-    marginTop: '1.5rem',
-    marginBottom: '0.5rem',
-    color: '#0d47a1',
-  };
-
-  const listStyle = {
-    paddingLeft: '1.5rem',
-    marginBottom: '1rem',
-  };
-
-  const liStyle = {
-    marginBottom: '0.4rem',
-  };
+  const industries = [
+    {
+      key: 'electronics',
+      image: '/images/00b88f1e-7be4-400e-b48b-73eee0db49e4.png',
+      route: '/business/applications/electronics',
+      title: lang === 'cn' ? '电子与半导体 行业' : 'Electronics & Semiconductors Industry',
+      points: lang === 'cn'
+        ? [
+            '晶圆缺陷的自动识别与标注系统',
+            '装测试阶段的控制逻辑优化',
+            '光刻/蚀刻工艺参数闭环优化',
+            '智能洁净室环境监控与能耗管理',
+          ]
+        : [
+            'Wafer defect detection and auto-labeling systems',
+            'Control optimization in packaging and testing',
+            'Closed-loop tuning of photolithography and etching parameters',
+            'Smart cleanroom monitoring and energy management',
+          ],
+      impact: lang === 'cn'
+        ? '+48% 检测效率提升 ｜–55% 返工率降低 ｜+26% 良品率提升'
+        : '+48% Inspection Throughput ｜–55% Manual Rework ｜+26% Yield Rate',
+    },
+    {
+      key: 'food',
+      image: '/images/3b027ac8-e855-4f36-83dd-c295cb68e5d1.png',
+      route: '/business/applications/food',
+      title: lang === 'cn' ? '食品与消费品 行业' : 'Food & Consumer Goods Industry',
+      points: lang === 'cn'
+        ? [
+            '食品包装产线的效率提升与智能优化',
+            '油类精炼处理与节能控制',
+            '全链条温控与追溯物流管理系统',
+          ]
+        : [
+            'Efficiency improvement and intelligent optimization of food packaging production lines',
+            'Oil refining and energy-saving control',
+            'Full-chain temperature control and traceability logistics management system',
+          ],
+      impact: lang === 'cn'
+        ? '+42% 产能提升 ｜–35% 废品率 ｜+25% 订单准确率'
+        : '+42% Throughput ｜–35% Waste Rate ｜+25% Order Accuracy',
+    },
+    {
+      key: 'manufacturing',
+      image: '/images/1bbf6b78-eb92-40c0-8ba1-247db47103c7.png',
+      route: '/business/applications/manufacturing',
+      title: lang === 'cn' ? '智能制造（先进制造与装备）行业' : 'Advanced Manufacturing Industry',
+      points: lang === 'cn'
+        ? [
+            '多机协作柔性制造产线系统',
+            '自动上下料与过程节拍同步',
+            '工业边缘计算与远程产线监控',
+            '预测性维护模型部署，降低停机时间',
+          ]
+        : [
+            'Flexible production lines with coordinated multi-robot systems',
+            'Automated material loading/unloading with synchronized takt time',
+            'Edge computing for industrial IoT and remote monitoring',
+            'Predictive maintenance reducing unplanned downtime',
+          ],
+      impact: lang === 'cn'
+        ? '+52% 生产效率提升 ｜–48% 停机时间减少 ｜+31% 系统透明度提升'
+        : '+52% Productivity ｜–48% Downtime ｜+31% System Visibility',
+    },
+    {
+      key: 'energy',
+      image: '/images/6cbe2128-60d5-42c7-84a8-d225f4db59b3.png',
+      route: '/business/applications/energy',
+      title: lang === 'cn' ? '能源与公共事业 行业' : 'Energy & Utilities Industry',
+      points: lang === 'cn'
+        ? [
+            '储能系统运行状态预测与调度算法',
+            '工业锅炉燃烧效率与气候因子耦合调控',
+            '多能源协同（光伏+储能+微电网）运维平台',
+            '电力系统负载异常检测与动态响应',
+          ]
+        : [
+            'Predictive scheduling of energy storage systems',
+            'Intelligent control of industrial boilers under dynamic climate conditions',
+            'Integrated PV-storage-microgrid operation optimization',
+            'Real-time anomaly detection in electric load systems',
+          ],
+      impact: lang === 'cn'
+        ? '+29% 能效提升 ｜–21% 运维成本降低 ｜+38% 电网响应能力增强'
+        : '+29% Energy Efficiency ｜–21% OPEX ｜+38% Grid Responsiveness',
+    },
+  ];
 
   return (
-    <section style={sectionStyle}>
-      <h2 style={titleStyle}>
+    <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+      <h2 style={{ textAlign: 'center', fontSize: '2rem', color: '#1a237e', marginBottom: '2rem' }}>
         {lang === 'cn' ? '服务行业与落地成效' : 'Industry Applications'}
       </h2>
-
-      <h3 style={subtitleStyle}>
-        {lang === 'cn' ? '服务行业：' : 'Who We Serve:'}
-      </h3>
-      <ul style={listStyle}>
-        {services.map((item, idx) => (
-          <li key={idx} style={liStyle}>{item}</li>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+        {industries.map((industry) => (
+          <div key={industry.key} style={{ border: '1px solid #ccc', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+            <img src={industry.image} alt={industry.key} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+            <div style={{ padding: '1rem' }}>
+              <h3 style={{ fontSize: '1.25rem', color: '#0d47a1' }}>{industry.title}</h3>
+              <ul style={{ paddingLeft: '1.25rem' }}>
+                {industry.points.map((p, i) => (
+                  <li key={i} style={{ marginBottom: '0.4rem' }}>{p}</li>
+                ))}
+              </ul>
+              <p style={{ fontWeight: 'bold', color: '#2e7d32', marginTop: '0.5rem' }}>{lang === 'cn' ? '业务成效：' : 'Business Impact:'} {industry.impact}</p>
+              <button onClick={() => navigate(industry.route)} style={{ marginTop: '1rem', backgroundColor: '#1a237e', color: 'white', border: 'none', padding: '0.5rem 1rem', borderRadius: '4px', cursor: 'pointer' }}>
+                {lang === 'cn' ? '查看详情' : 'View Details'}
+              </button>
+            </div>
+          </div>
         ))}
-      </ul>
-
-      <h3 style={subtitleStyle}>
-        {lang === 'cn' ? '项目成效：' : 'Business Impact:'}
-      </h3>
-      <ul style={listStyle}>
-        {impacts.map((item, idx) => (
-          <li key={idx} style={liStyle}>{item}</li>
-        ))}
-      </ul>
-
-      <h3 style={subtitleStyle}>
-        {lang === 'cn' ? '典型应用场景：' : 'Application Scenarios:'}
-      </h3>
-      <ul style={listStyle}>
-        {scenarios.map((item, idx) => (
-          <li key={idx} style={liStyle}>{item}</li>
-        ))}
-      </ul>
+      </div>
     </section>
   );
 };
 
 export default BusinessApplications;
+
