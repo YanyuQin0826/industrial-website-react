@@ -9,25 +9,25 @@ const content = {
       {
         name: 'Advanced Industrial Technologies',
         description: 'From lab to production — we deliver automation, materials, and energy solutions ready for industrial scale.',
-        image: 'https://via.placeholder.com/250x150?text=Smart+Control+Unit',
+        image: 'https://via.placeholder.com/250x150?text=Smart+Control+Unit', //可更改product 1 模块的图片
         route: 'product1',
       },
       {
         name: 'Innovation Facilitation',
         description: 'Bridging research and markets — we accelerate technology transfer and commercialization.',
-        image: 'https://via.placeholder.com/250x150?text=Welding+Tool',
+        image: 'https://via.placeholder.com/250x150?text=Welding+Tool', //可更改product 2 模块的图片
         route: 'product2',
       },
       {
         name: 'Advanced Alloy Material',
         description: 'Premium-grade alloy used in aerospace and automotive.',
-        image: 'https://via.placeholder.com/250x150?text=Alloy+Material',
+        image: 'https://via.placeholder.com/250x150?text=Alloy+Material', //可更改product 3 模块的图片
         route: 'product3',
       },
       {
         name: 'Industrial Sensor Suite',
         description: 'High-precision sensors for temperature, pressure, and motion monitoring.',
-        image: 'https://via.placeholder.com/250x150?text=Sensor+Suite',
+        image: 'https://via.placeholder.com/250x150?text=Sensor+Suite', //可更改product 4 模块的图片
         route: 'product4',
       },
     ],

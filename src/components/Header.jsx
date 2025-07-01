@@ -7,9 +7,9 @@ const content = {
     home: 'Home',
     business: 'Business',
     businessMenu: [
-      { name: 'Advanced Industrial Technologies', path: '/business/advanced-tech' },
+      { name: 'Industrial Technologies', path: '/business/advanced-tech' },
       { name: 'Innovation Facilitation', path: '/business/innovation' },
-      { name: 'Technical Consulting & Advisory', path: '/business/consulting' },
+      { name: 'Technical Consulting', path: '/business/consulting' },
       { name: 'Industry Applications', path: '/business/applications' }
     ],
     products: 'Products',
