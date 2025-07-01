@@ -43,6 +43,22 @@ const modules = [
       en: 'Module Five integrates system management and dashboards.',
     },
   },
+  {
+    image: '/images/module1.jpg',
+    title: { cn: '模块六', en: 'Module One' },
+    desc: {
+      cn: '模块一用于实时数据采集与处理。',
+      en: 'Module One for real-time data acquisition and processing.',
+    },
+  },
+  {
+    image: '/images/module1.jpg',
+    title: { cn: '模块七', en: 'Module One' },
+    desc: {
+      cn: '模块一用于实时数据采集与处理。',
+      en: 'Module One for real-time data acquisition and processing.',
+    },
+  },
 ];
 
 const Product1 = () => {
