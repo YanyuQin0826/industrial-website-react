@@ -10,7 +10,6 @@ const BusinessApplications = () => {
     {
       key: 'electronics',
       image: '/images/00b88f1e-7be4-400e-b48b-73eee0db49e4.png',
-      route: '/business/applications/electronics',
       title: lang === 'cn' ? '电子与半导体 行业' : 'Electronics & Semiconductors Industry',
       points: lang === 'cn'
         ? [
@@ -32,7 +31,6 @@ const BusinessApplications = () => {
     {
       key: 'food',
       image: '/images/3b027ac8-e855-4f36-83dd-c295cb68e5d1.png',
-      route: '/business/applications/food',
       title: lang === 'cn' ? '食品与消费品 行业' : 'Food & Consumer Goods Industry',
       points: lang === 'cn'
         ? [
@@ -52,7 +50,6 @@ const BusinessApplications = () => {
     {
       key: 'manufacturing',
       image: '/images/1bbf6b78-eb92-40c0-8ba1-247db47103c7.png',
-      route: '/business/applications/manufacturing',
       title: lang === 'cn' ? '智能制造（先进制造与装备）行业' : 'Advanced Manufacturing Industry',
       points: lang === 'cn'
         ? [
@@ -74,7 +71,6 @@ const BusinessApplications = () => {
     {
       key: 'energy',
       image: '/images/6cbe2128-60d5-42c7-84a8-d225f4db59b3.png',
-      route: '/business/applications/energy',
       title: lang === 'cn' ? '能源与公共事业 行业' : 'Energy & Utilities Industry',
       points: lang === 'cn'
         ? [
@@ -93,6 +89,48 @@ const BusinessApplications = () => {
         ? '+29% 能效提升 ｜–21% 运维成本降低 ｜+38% 电网响应能力增强'
         : '+29% Energy Efficiency ｜–21% OPEX ｜+38% Grid Responsiveness',
     },
+    {
+      key: 'healthcare',
+      image: '/images/healthcare.png',
+      title: lang === 'cn' ? '医疗与生物医药 行业' : 'Pharmaceuticals & Healthcare Industry',
+      points: lang === 'cn'
+        ? [
+            '生物反应器工艺参数的AI预测控制',
+            '药品包装视觉缺陷检测系统',
+            '医疗器械制造过程的ESG审计与碳管理',
+            '实验室样本自动化搬运与追溯系统',
+          ]
+        : [
+            'AI-driven control of bioreactor process parameters',
+            'Visual inspection systems for pharmaceutical packaging',
+            'ESG and carbon audit solutions in medical device production',
+            'Automated sample logistics and tracking in laboratories',
+          ],
+      impact: lang === 'cn'
+        ? '+34% 批次一致性提升 ｜–41% 人为错误降低 ｜+47% 可追溯性增强'
+        : '+34% Batch Consistency ｜–41% Human Error ｜+47% Traceability',
+    },
+    {
+      key: 'chemicals',
+      image: '/images/chemicals.png',
+      title: lang === 'cn' ? '化工与新材料 行业' : 'Chemicals & Materials Industry',
+      points: lang === 'cn'
+        ? [
+            '精细化工反应过程建模与动态调节',
+            '挤出与注塑过程参数优化与能耗监测',
+            '高分子材料热稳定性与分散性在线评估',
+            '材料成分识别与生产配比优化系统',
+          ]
+        : [
+            'Modeling and control of fine chemical reactions',
+            'Process optimization and energy monitoring in extrusion/molding',
+            'In-line thermal and dispersion analysis for polymer processing',
+            'AI-powered formulation and dosing systems for materials',
+          ],
+      impact: lang === 'cn'
+        ? '+36% 配方稳定性提升 ｜–27% 材料浪费降低 ｜+31% 能耗节约'
+        : '+36% Formula Stability ｜–27% Material Waste ｜+31% Energy Savings',
+    },
   ];
 
   return (
@@ -102,8 +140,20 @@ const BusinessApplications = () => {
       </h2>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
         {industries.map((industry) => (
-          <div key={industry.key} style={{ border: '1px solid #ccc', borderRadius: '10px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
-            <img src={industry.image} alt={industry.key} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+          <div
+            key={industry.key}
+            style={{
+              border: '1px solid #ccc',
+              borderRadius: '10px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+            }}
+          >
+            <img
+              src={industry.image}
+              alt={industry.key}
+              style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+            />
             <div style={{ padding: '1rem' }}>
               <h3 style={{ fontSize: '1.25rem', color: '#0d47a1' }}>{industry.title}</h3>
               <ul style={{ paddingLeft: '1.25rem' }}>
@@ -111,10 +161,9 @@ const BusinessApplications = () => {
                   <li key={i} style={{ marginBottom: '0.4rem' }}>{p}</li>
                 ))}
               </ul>
-              <p style={{ fontWeight: 'bold', color: '#2e7d32', marginTop: '0.5rem' }}>{lang === 'cn' ? '业务成效：' : 'Business Impact:'} {industry.impact}</p>
-              <button onClick={() => navigate(industry.route)} style={{ marginTop: '1rem', backgroundColor: '#1a237e', color: 'white', border: 'none', padding: '0.5rem 1rem', borderRadius: '4px', cursor: 'pointer' }}>
-                {lang === 'cn' ? '查看详情' : 'View Details'}
-              </button>
+              <p style={{ fontWeight: 'bold', color: '#2e7d32', marginTop: '0.5rem' }}>
+                {lang === 'cn' ? '业务成效：' : 'Business Impact:'} {industry.impact}
+              </p>
             </div>
           </div>
         ))}
@@ -124,4 +173,3 @@ const BusinessApplications = () => {
 };
 
 export default BusinessApplications;
-
