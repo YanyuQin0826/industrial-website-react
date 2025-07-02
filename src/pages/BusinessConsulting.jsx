@@ -30,7 +30,7 @@ const BusinessConsulting = () => {
   const imageStyle = {
     flex: '1 1 400px',
     minHeight: '320px',
-    backgroundImage: 'url("/images/consulting.jpg")', // 🔁 替换为实际图片路径
+    backgroundImage: 'url("/images/consulting.png")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

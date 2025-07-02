@@ -30,7 +30,7 @@ const BusinessTech = () => {
   const imageStyle = {
     flex: '1 1 400px',
     minHeight: '320px',
-    backgroundImage: 'url("/images/business-tech.jpg")', // ← 替换为你的图片路径
+    backgroundImage: 'url("/images/business-tech.png")', 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

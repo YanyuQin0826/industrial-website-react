@@ -30,7 +30,7 @@ const BusinessInnovation = () => {
   const imageStyle = {
     flex: '1 1 400px',
     minHeight: '320px',
-    backgroundImage: 'url("/images/innovation.jpg")', // 请替换为你的图片路径
+    backgroundImage: 'url("/images/innovation.png")', 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };
