@@ -137,7 +137,7 @@ const BusinessApplications = () => {
     <section style={{ margin: 0, padding: 0, fontFamily: 'Arial' }}>
       <div style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
         <img
-          src="/images/industry-header.jpg"
+          src="/images/headerApp.png"
           alt="header"
           style={{
             width: '100%',
