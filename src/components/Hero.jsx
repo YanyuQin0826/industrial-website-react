@@ -33,7 +33,7 @@ const Hero = () => {
       style={{
         position: 'relative',
         width: '100%',
-        height: '100vh', // 与其他板块统一高度
+        height: '100vh',
         overflow: 'hidden',
         marginBottom: '3rem',
       }}

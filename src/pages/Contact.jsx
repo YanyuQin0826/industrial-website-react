@@ -1,4 +1,3 @@
-
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../LanguageContext';
 
@@ -38,10 +37,36 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    console.log('Form submitted:', formData);
+  
+    const formUrl = 'https://formspree.io/f/xxxxxxx'; // 替换为你自己的 Formspree 链接
+  
+    try {
+      const response = await fetch(formUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+  
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert('❌ Submission failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Formspree error:', error);
+      alert('❌ Error sending message.');
+    }
   };
 
   return (

@@ -4,7 +4,7 @@ import { LanguageContext } from '../LanguageContext';
 
 const modules = [
   {
-    image: '/images/weld1.jpg',
+    image: '/images/p2-1.jpg',
     title: { cn: '模块一名称', en: 'Laser Welding Head' },
     desc: {
       cn: '中文详情。',
@@ -12,7 +12,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld2.jpg',
+    image: '/images/p2-2.jpg',
     title: { cn: '模块二名称', en: 'Multi-axis Welding Arm' },
     desc: {
       cn: '中文详情。',
@@ -20,7 +20,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld3.jpg',
+    image: '/images/p2-3.jpg',
     title: { cn: '模块三名称', en: 'Smart Control Unit' },
     desc: {
       cn: '中文详情。',
@@ -28,7 +28,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld4.jpg',
+    image: '/images/p2-4.jpg',
     title: { cn: '模块四名称', en: 'Air Cooling System' },
     desc: {
       cn: '中文详情。',
@@ -36,7 +36,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld5.jpg',
+    image: '/images/p2-5.jpg',
     title: { cn: '模块五名称', en: 'Auto Feeding System' },
     desc: {
       cn: '中文详情。',
@@ -44,7 +44,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld6.jpg',
+    image: '/images/p2-6.jpg',
     title: { cn: '模块六名称', en: 'Remote Monitoring Module' },
     desc: {
       cn: '中文详情。',
@@ -52,7 +52,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld7.jpg',
+    image: '/images/p2-7.jpg',
     title: { cn: '模块七名称', en: 'Smart Seam Detection' },
     desc: {
       cn: '中文详情。',
@@ -60,7 +60,7 @@ const modules = [
     },
   },
   {
-    image: '/images/weld8.jpg',
+    image: '/images/p2-8.jpg',
     title: { cn: '模块八名称', en: 'Safety Protection Shield' },
     desc: {
       cn: '中文详情。',

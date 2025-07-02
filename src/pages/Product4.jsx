@@ -4,7 +4,7 @@ import { LanguageContext } from '../LanguageContext';
 
 const modules = [
   {
-    image: '/images/sensor1.jpg',
+    image: '/images/p4-1.jpg',
     title: { cn: '中文名称', en: 'Temperature Sensor' },
     desc: {
       cn: '中文介绍详情。',
@@ -12,7 +12,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor2.jpg',
+    image: '/images/p4-2.jpg',
     title: { cn: '中文名称', en: 'Pressure Sensor' },
     desc: {
       cn: '中文介绍详情。',
@@ -20,7 +20,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor3.jpg',
+    image: '/images/p4-3.jpg',
     title: { cn: '中文名称', en: 'Accelerometer' },
     desc: {
       cn: '中文介绍详情。',
@@ -28,7 +28,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor4.jpg',
+    image: '/images/p4-4.jpg',
     title: { cn: '中文名称', en: 'Displacement Sensor' },
     desc: {
       cn: '中文介绍详情。',
@@ -36,7 +36,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor5.jpg',
+    image: '/images/p4-5.jpg',
     title: { cn: '中文名称', en: 'Humidity Sensor' },
     desc: {
       cn: '中文介绍详情。',
@@ -44,7 +44,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor6.jpg',
+    image: '/images/p4-6.jpg',
     title: { cn: '中文名称', en: 'Photoelectric Sensor' },
     desc: {
       cn: '中文介绍详情。',
@@ -52,7 +52,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor7.jpg',
+    image: '/images/p4-7.jpg',
     title: { cn: '中文名称', en: 'Force Sensor' },
     desc: {
       cn: '中文介绍详情。',
@@ -60,7 +60,7 @@ const modules = [
     },
   },
   {
-    image: '/images/sensor8.jpg',
+    image: '/images/p4-8.jpg',
     title: { cn: '中文名称', en: 'Multi-Sensor Module' },
     desc: {
       cn: '中文介绍详情。',

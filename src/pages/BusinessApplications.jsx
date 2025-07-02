@@ -9,7 +9,7 @@ const BusinessApplications = () => {
   const industries = [
     {
       key: 'electronics',
-      image: '/images/00b88f1e-7be4-400e-b48b-73eee0db49e4.png',
+      image: '/images/electronics.png',
       title: lang === 'cn' ? '电子与半导体 行业' : 'Electronics & Semiconductors Industry',
       points: lang === 'cn'
         ? [
@@ -30,7 +30,7 @@ const BusinessApplications = () => {
     },
     {
       key: 'food',
-      image: '/images/3b027ac8-e855-4f36-83dd-c295cb68e5d1.png',
+      image: '/images/food.png',
       title: lang === 'cn' ? '食品与消费品 行业' : 'Food & Consumer Goods Industry',
       points: lang === 'cn'
         ? [
@@ -49,7 +49,7 @@ const BusinessApplications = () => {
     },
     {
       key: 'manufacturing',
-      image: '/images/1bbf6b78-eb92-40c0-8ba1-247db47103c7.png',
+      image: '/images/manufacturing.png',
       title: lang === 'cn' ? '智能制造（先进制造与装备）行业' : 'Advanced Manufacturing Industry',
       points: lang === 'cn'
         ? [
@@ -70,7 +70,7 @@ const BusinessApplications = () => {
     },
     {
       key: 'energy',
-      image: '/images/6cbe2128-60d5-42c7-84a8-d225f4db59b3.png',
+      image: '/images/energy.png',
       title: lang === 'cn' ? '能源与公共事业 行业' : 'Energy & Utilities Industry',
       points: lang === 'cn'
         ? [

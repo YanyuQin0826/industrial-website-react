@@ -63,7 +63,7 @@ const Home = () => {
   style={{
     backgroundColor: '#f7f9fb',
     padding: '4rem 1rem',
-    minHeight: '600px', // 保持与轮播一致
+    minHeight: '600px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

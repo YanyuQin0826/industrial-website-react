@@ -4,7 +4,7 @@ import { LanguageContext } from '../LanguageContext';
 
 const modules = [
   {
-    image: '/images/alloy1.jpg',
+    image: '/images/p3-1.jpg',
     title: { cn: '中文名称', en: 'Titanium Alloy' },
     desc: {
       cn: '中文详情介绍。',
@@ -12,7 +12,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy2.jpg',
+    image: '/images/p3-2.jpg',
     title: { cn: '中文名称', en: 'Nickel-Based Alloy' },
     desc: {
       cn: '中文详情介绍。',
@@ -20,7 +20,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy3.jpg',
+    image: '/images/p3-3.jpg',
     title: { cn: '中文名称', en: 'Aluminum Alloy' },
     desc: {
       cn: '中文详情介绍。',
@@ -28,7 +28,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy4.jpg',
+    image: '/images/p3-4.jpg',
     title: { cn: '中文名称', en: 'High Strength Steel' },
     desc: {
       cn: '中文详情介绍。',
@@ -36,7 +36,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy5.jpg',
+    image: '/images/p3-5.jpg',
     title: { cn: '中文名称', en: 'Copper Alloy' },
     desc: {
       cn: '中文详情介绍。',
@@ -44,7 +44,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy6.jpg',
+    image: '/images/p3-6.jpg',
     title: { cn: '中文名称', en: 'Powder Metallurgy Alloy' },
     desc: {
       cn: '中文详情介绍。',
@@ -52,7 +52,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy5.jpg',
+    image: '/images/p3-7.jpg',
     title: { cn: '中文名称', en: 'Copper Alloy' },
     desc: {
       cn: '中文详情介绍。',
@@ -60,7 +60,7 @@ const modules = [
     },
   },
   {
-    image: '/images/alloy5.jpg',
+    image: '/images/p3-8.jpg',
     title: { cn: '中文名称', en: 'Copper Alloy' },
     desc: {
       cn: '中文详情介绍。',

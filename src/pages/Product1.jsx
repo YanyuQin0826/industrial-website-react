@@ -4,7 +4,7 @@ import { LanguageContext } from '../LanguageContext';
 
 const modules = [
   {
-    image: '/images/module1.jpg',
+    image: '/images/p1-1.jpg',
     title: { cn: '模块一', en: 'Module One' },
     desc: {
       cn: '模块一用于实时数据采集与处理。',
@@ -12,7 +12,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module2.jpg',
+    image: '/images/p1-2.jpg',
     title: { cn: '模块二', en: 'Module Two' },
     desc: {
       cn: '模块二提供智能预测与分析功能。',
@@ -20,7 +20,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module3.jpg',
+    image: '/images/p1-3.jpg',
     title: { cn: '模块三', en: 'Module Three' },
     desc: {
       cn: '模块三用于设备间的智能协调。',
@@ -28,7 +28,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module4.jpg',
+    image: '/images/p1-4.jpg',
     title: { cn: '模块四', en: 'Module Four' },
     desc: {
       cn: '模块四支持远程维护与故障检测。',
@@ -36,7 +36,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module5.jpg',
+    image: '/images/p1-5.jpg',
     title: { cn: '模块五', en: 'Module Five' },
     desc: {
       cn: '模块五整合系统管理与可视化面板。',
@@ -44,7 +44,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module1.jpg',
+    image: '/images/p1-6.jpg',
     title: { cn: '模块六', en: 'Module One' },
     desc: {
       cn: '模块一用于实时数据采集与处理。',
@@ -52,7 +52,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module1.jpg',
+    image: '/images/p1-7.jpg',
     title: { cn: '模块七', en: 'Module One' },
     desc: {
       cn: '模块一用于实时数据采集与处理。',
@@ -60,7 +60,7 @@ const modules = [
     },
   },
   {
-    image: '/images/module1.jpg',
+    image: '/images/p1-8.jpg',
     title: { cn: '模块八', en: 'Module One' },
     desc: {
       cn: '模块一用于实时数据采集与处理。',

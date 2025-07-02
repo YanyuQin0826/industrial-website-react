@@ -1,4 +1,4 @@
-// src/pages/Business.jsx
+
 const Business = () => {
   return (
     <section style={{ padding: '2rem' }}>
