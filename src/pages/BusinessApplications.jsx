@@ -134,61 +134,69 @@ const BusinessApplications = () => {
   ];
 
   return (
-    <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0', fontFamily: 'Arial' }}>
-        <div style={{ position: 'relative', width: '100%', overflow: 'hidden'}}>
-            <img
-                src="/images/headerApp.png"
-                alt="header"
-                style={{ width: '100%', height: '240px', objectFit: 'cover',display: 'block' }}
+    <section style={{ margin: 0, padding: 0, fontFamily: 'Arial' }}>
+      <div style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
+        <img
+          src="/images/industry-header.jpg"
+          alt="header"
+          style={{
+            width: '100%',
+            height: '240px',
+            objectFit: 'cover',
+            display: 'block'
+          }}
         />
-    <h2
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '2rem',
-        color: 'white',
-        textShadow: '0 2px 6px rgba(0,0,0,0.5)',
-        textAlign: 'center',
-        padding: '0 1rem',
-        lineHeight: '1.4',
-        margin: 0,
-        whiteSpace: 'nowrap',
-      }}
-    >
-      {lang === 'cn' ? '服务行业与落地成效' : 'Industry Applications'}
-    </h2>
-  </div>
-    <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-        {industries.map((industry) => (
-          <div
-            key={industry.key}
-            style={{
-              border: '1px solid #ccc',
-              borderRadius: '10px',
-              overflow: 'hidden',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-            }}
-          >
-            <img
-              src={industry.image}
-              alt={industry.key}
-              style={{ width: '100%', height: '200px', objectFit: 'cover' }}
-            />
-            <div style={{ padding: '1rem' }}>
-              <h3 style={{ fontSize: '1.25rem', color: '#0d47a1' }}>{industry.title}</h3>
-              <ul style={{ paddingLeft: '1.25rem' }}>
-                {industry.points.map((p, i) => (
-                  <li key={i} style={{ marginBottom: '0.4rem' }}>{p}</li>
-                ))}
-              </ul>
-              <p style={{ fontWeight: 'bold', color: '#2e7d32', marginTop: '0.5rem' }}>
-                {lang === 'cn' ? '业务成效：' : 'Business Impact:'} {industry.impact}
-              </p>
+        <h2
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            fontSize: '2rem',
+            color: 'white',
+            textShadow: '0 2px 6px rgba(0,0,0,0.5)',
+            textAlign: 'center',
+            padding: '0 1rem',
+            lineHeight: '1.4',
+            margin: 0,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          {lang === 'cn' ? '服务行业与落地成效' : 'Industry Applications'}
+        </h2>
+      </div>
+
+      <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+          {industries.map((industry) => (
+            <div
+              key={industry.key}
+              style={{
+                border: '1px solid #ccc',
+                borderRadius: '10px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+              }}
+            >
+              <img
+                src={industry.image}
+                alt={industry.key}
+                style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+              />
+              <div style={{ padding: '1rem' }}>
+                <h3 style={{ fontSize: '1.25rem', color: '#0d47a1' }}>{industry.title}</h3>
+                <ul style={{ paddingLeft: '1.25rem' }}>
+                  {industry.points.map((p, i) => (
+                    <li key={i} style={{ marginBottom: '0.4rem' }}>{p}</li>
+                  ))}
+                </ul>
+                <p style={{ fontWeight: 'bold', color: '#2e7d32', marginTop: '0.5rem' }}>
+                  {lang === 'cn' ? '业务成效：' : 'Business Impact:'} {industry.impact}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
