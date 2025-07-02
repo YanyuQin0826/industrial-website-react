@@ -135,11 +135,11 @@ const BusinessApplications = () => {
 
   return (
     <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0', fontFamily: 'Arial' }}>
-        <div style={{ position: 'relative', width: '100%' }}>
+        <div style={{ position: 'relative', width: '100%', overflow: 'hidden'}}>
             <img
                 src="/images/headerApp.png"
                 alt="header"
-                style={{ width: '100vw', height: '280px', objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: '240px', objectFit: 'cover',display: 'block' }}
         />
     <h2
       style={{
@@ -149,7 +149,7 @@ const BusinessApplications = () => {
         transform: 'translate(-50%, -50%)',
         fontSize: '2rem',
         color: 'white',
-        textShadow: '0 2px 6px rgba(0,0,0,0.6)',
+        textShadow: '0 2px 6px rgba(0,0,0,0.5)',
         textAlign: 'center',
         padding: '0 1rem',
         lineHeight: '1.4',
