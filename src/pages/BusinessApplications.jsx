@@ -135,30 +135,32 @@ const BusinessApplications = () => {
 
   return (
     <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0', fontFamily: 'Arial' }}>
-  <div style={{ position: 'relative', width: '100%' }}>
-    <img
-      src="/images/headerApp.png"
-      alt="header"
-      style={{ width: '100%', height: 'auto', display: 'block' }}
-    />
+        <div style={{ position: 'relative', width: '100%' }}>
+            <img
+                src="/images/headerApp.png"
+                alt="header"
+                style={{ width: '100vw', height: '280px', objectFit: 'cover', display: 'block' }}
+        />
     <h2
       style={{
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        fontSize: '2.5rem',
+        fontSize: '2rem',
         color: 'white',
         textShadow: '0 2px 6px rgba(0,0,0,0.6)',
         textAlign: 'center',
         padding: '0 1rem',
         lineHeight: '1.4',
+        margin: 0,
+        whiteSpace: 'nowrap',
       }}
     >
       {lang === 'cn' ? '服务行业与落地成效' : 'Industry Applications'}
     </h2>
   </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+    <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
         {industries.map((industry) => (
           <div
             key={industry.key}
