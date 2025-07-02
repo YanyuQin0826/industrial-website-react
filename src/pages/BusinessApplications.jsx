@@ -166,8 +166,13 @@ const BusinessApplications = () => {
         </h2>
       </div>
 
-      <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+      <div style={{ padding: '2rem', maxWidth: '1440px', margin: '0 auto' }}>
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '2rem',
+          justifyContent: 'center'
+        }}>
           {industries.map((industry) => (
             <div
               key={industry.key}
@@ -175,7 +180,10 @@ const BusinessApplications = () => {
                 border: '1px solid #ccc',
                 borderRadius: '10px',
                 overflow: 'hidden',
-                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                width: 'calc(50% - 1rem)',
+                minWidth: '300px',
+                maxWidth: '600px'
               }}
             >
               <img
