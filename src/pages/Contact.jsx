@@ -40,7 +40,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    const formUrl = 'https://formspree.io/f/xxxxxxx'; // 替换为你自己的 Formspree 链接
+    const formUrl = 'https://formspree.io/f/meokdjee'; 
   
     try {
       const response = await fetch(formUrl, {
