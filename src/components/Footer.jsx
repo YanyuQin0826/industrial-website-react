@@ -10,8 +10,8 @@ const Footer = () => {
         }}
       >
         <p><strong>International Innovation Institute LLC</strong></p>
-        <p>9034 Hermosa Dr, Temple City, CA 91780</p>
-        <p>Email: liang@sdaovc.cn | WhatsApp: +86 15305325679</p>
+        <p>1987 San Salvatore Place, San Marino, CA 91108</p>
+        <p>Email: interinnovationinst@gmail.com | Phone Number: +1 213-595-9166</p>
   
         <div style={{ marginTop: '1rem' }}>
           <a href="#" style={{ color: 'white', margin: '0 1rem' }}>Facebook</a>
