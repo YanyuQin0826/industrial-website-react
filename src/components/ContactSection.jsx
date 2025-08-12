@@ -44,9 +44,9 @@ const Contact = () => {
         <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>{text.heading}</h2>
 
         <div style={{ marginBottom: '2rem' }}>
-            <p><strong>{text.phone}:</strong> +1 234 567 890</p>
-            <p><strong>{text.email}:</strong> contact@institute.com</p>
-            <p><strong>📍 {text.address}</strong></p>
+            <p><strong>{text.phone}:</strong> +1 213 595 9166</p>
+            <p><strong>{text.email}:</strong> interinnovationinst@gmail.com</p>
+            <p><strong>📍 {text.address}</strong> 1987 San Salvatore Place, San Marino, CA 91108</p>
             <p>{text.cooperation}</p>
         </div>
   
